@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+# MyAAC (website/account manager PHP do servidor TFS)
+language: pt-BR
+tone_instructions: >-
+  Revise em português do Brasil, direto e técnico. Priorize SEGURANÇA:
+  defined('MYAAC') or die(...) no topo de toda page/include; sanitização de
+  $_GET/$_POST e de placeholders de rota (ex.: characters/{name}); SQL sempre
+  parametrizado via Eloquent/query builder (nunca concatenado); CSRF em todo
+  POST ({{ csrf() }} + validação). Atenção ao schema compartilhado com o TFS
+  (migrations só mexem em tabelas do MyAAC) e a confirmar existência de coluna
+  (hasColumn) antes de usar. Prefira plugin/tema a editar o core (system/).
+early_access: false
+reviews:
+  profile: chill
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_filters:
+    - "!vendor/**"
+    - "!system/libs/**"
+    - "!images/**"
+    - "!cypress/**"
+    - "!**/*.min.js"
+    - "!**/*.min.css"
+chat:
+  auto_reply: true

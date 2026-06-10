@@ -1,0 +1,10 @@
+---
+# Codacy - MyAAC (PHP + Twig)
+exclude_paths:
+  - 'vendor/**'
+  - 'system/libs/**'
+  - 'images/**'
+  - 'cypress/**'
+  - 'install/**'
+  - '**/*.min.js'
+  - '**/*.min.css'
